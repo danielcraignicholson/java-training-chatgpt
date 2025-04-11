@@ -1,6 +1,6 @@
 package com.github.danielcraignicholson.oop;
 
-public class Car {
+public class Car extends Vehicle {
 
     private String make;
     private String model;
@@ -8,8 +8,7 @@ public class Car {
     private Engine engine;
 
     public Car(String make, String model, int year, Engine engine) {
-        this.make = make;
-        this.model = model;
+        super(make, model);
         this.year = year;
         this.engine = engine;
     }
@@ -48,6 +47,18 @@ public class Car {
     }
 
     public void turnOffCar() {
+        engine.stopEngine();
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Starting car engine...");
+        engine.startEngine();
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Stopping car engine...");
         engine.stopEngine();
     }
 

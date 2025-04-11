@@ -7,6 +7,7 @@ public class Main {
         Engine engine = new Engine("V6", 300);
         Car car = new Car("Kia", "Ceed", 2009, engine);
         SportsCar sportsCar = new SportsCar("Porsche", "911", 2020, engine, true);
+        Startable startableEngine = new Engine("V8", 350);
 
         System.out.println("Car year: " + car.getYear());
         System.out.println("Car make: " + car.getMake());
@@ -26,6 +27,12 @@ public class Main {
         sportsCar.drive();
         sportsCar.activateTurboBoost();
         sportsCar.turnOffCar();
+        car.info();
+        car.start();
+        System.out.println(car);
+        car.stop();
+        car.start();
+        startableEngine.start();
 
     }
 

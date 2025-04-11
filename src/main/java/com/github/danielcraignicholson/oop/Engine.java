@@ -1,6 +1,6 @@
 package com.github.danielcraignicholson.oop;
 
-public class Engine {
+public class Engine implements Startable{
 
     private String type;
     private int horsepower;
@@ -18,12 +18,23 @@ public class Engine {
         System.out.println("Engine stopped");
     }
 
+    @Override
+    public void start() {
+        System.out.println("Startable");
+        startEngine();
+    }
+
     public String getType(){
         return this.type;
     }
 
     public int getHorsepower() {
         return this.horsepower;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine type = " + type + ", " + "horsepower = " + horsepower;
     }
 
 }
