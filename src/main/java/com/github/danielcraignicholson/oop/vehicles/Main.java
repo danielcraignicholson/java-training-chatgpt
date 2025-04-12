@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop;
+package com.github.danielcraignicholson.oop.vehicles;
 
 public class Main {
 
@@ -8,6 +8,12 @@ public class Main {
         Car car = new Car("Kia", "Ceed", 2009, engine);
         SportsCar sportsCar = new SportsCar("Porsche", "911", 2020, engine, true);
         Startable startableEngine = new Engine("V8", 350);
+        Car[] cars = new Car[2];
+        cars[0] = car;
+        cars[1] = sportsCar;
+        Startable[] startables = new Startable[2];
+        startables[0] = engine;
+        startables[1] = new Computer();
 
         System.out.println("Car year: " + car.getYear());
         System.out.println("Car make: " + car.getMake());
@@ -33,6 +39,20 @@ public class Main {
         car.stop();
         car.start();
         startableEngine.start();
+
+        for (int i = 0; i < cars.length; i++) {
+            cars[i].drive();
+        }
+
+        for (Startable device : startables) {
+            device.start(); // Polymorphic call
+        }
+
+        System.out.println("-----");
+
+        for (Startable device : startables) {
+            device.stop(); // Polymorphic call
+        }
 
     }
 

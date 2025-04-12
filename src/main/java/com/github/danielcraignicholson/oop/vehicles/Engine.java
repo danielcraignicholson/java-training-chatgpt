@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop;
+package com.github.danielcraignicholson.oop.vehicles;
 
 public class Engine implements Startable{
 
@@ -22,6 +22,12 @@ public class Engine implements Startable{
     public void start() {
         System.out.println("Startable");
         startEngine();
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Startable stopped");
+        stopEngine();
     }
 
     public String getType(){

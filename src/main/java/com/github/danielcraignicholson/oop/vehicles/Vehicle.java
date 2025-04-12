@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop;
+package com.github.danielcraignicholson.oop.vehicles;
 
 public abstract class Vehicle {
 
