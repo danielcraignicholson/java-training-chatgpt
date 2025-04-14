@@ -5,11 +5,13 @@ public abstract class LibraryItem {
     private String title;
     private String author;
     private int yearPublished;
+    private Status status;
 
     public LibraryItem(String title, String author, int yearPublished) {
         this.title = title;
         this.author = author;
         this.yearPublished = yearPublished;
+        status = Status.AVAILABLE;
     }
 
     public String getTitle() {
@@ -36,7 +38,20 @@ public abstract class LibraryItem {
         this.yearPublished = yearPublished;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     public abstract void checkout();
+
+    public void returnItem() {
+        setStatus(Status.AVAILABLE);
+        System.out.println("Book returned: " + getTitle() + " by " + getAuthor());
+    };
 
     @Override
     public String toString() {
