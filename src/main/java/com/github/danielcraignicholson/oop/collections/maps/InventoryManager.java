@@ -7,6 +7,7 @@ public class InventoryManager {
 
   private final Map<String, Integer> inventory = new HashMap<>();
   private final Map<String, Double> prices = new HashMap<>();
+  private final Map<String, Double> discounts = new HashMap<>();
 
   public void addItem(String item, int quantity) {
     inventory.put(item, inventory.getOrDefault(item, 0) + quantity);
@@ -42,6 +43,9 @@ public class InventoryManager {
       int current = entry.getValue();
       if (prices.containsKey(entry.getKey())) {
         double cost = prices.get(entry.getKey());
+        double discount = discounts.getOrDefault(entry.getKey(), 0.0);
+        double total = (current * cost);
+        double totalWithDiscount = total - (total * discount);
         System.out.println(
             "- "
                 + entry.getKey()
@@ -49,8 +53,10 @@ public class InventoryManager {
                 + current
                 + " items at £"
                 + cost
-                + " each = £"
-                + (current * cost));
+                + " each, "
+                + (discount * 100)
+                + "% off = £"
+                + String.format("%.2f", totalWithDiscount));
       } else {
         System.out.println("Cannot display inventory. Some items do not contain a price");
         break;
@@ -68,20 +74,29 @@ public class InventoryManager {
   }
 
   public void inventoryValue() {
-    double total = 0;
-
+    double total;
+    double totalWithDiscount = 0;
     for (Map.Entry<String, Integer> entry : inventory.entrySet()) {
       int current = entry.getValue();
-
       if (prices.get(entry.getKey()) != null) {
         double cost = prices.get(entry.getKey());
-        total += current * cost;
+        double discount = discounts.getOrDefault(entry.getKey(), 0.0);
+        total = current * cost;
+        totalWithDiscount += total - (total * discount);
       } else {
         System.out.println("Cannot display inventory. Some items do not contain a price");
         break;
       }
     }
+    System.out.println("Total inventory value: £" + String.format("%.2f", totalWithDiscount));
+  }
 
-    System.out.println("Total inventory value: £" + total);
+  public void setDiscount(String item, double percentage) {
+    if (inventory.containsKey(item)) {
+      discounts.put(item, percentage);
+      System.out.println(item + " discount set as " + (percentage * 100) + "%");
+    } else {
+      System.out.println(item + " not in inventory. Please add first.");
+    }
   }
 }

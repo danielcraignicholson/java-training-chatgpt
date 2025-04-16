@@ -26,7 +26,12 @@ public class Main {
     inventory.setPrice("mango", 1.45);
     inventory.setPrice("pear", 0.84);
 
+    inventory.setDiscount("banana", 0.10);
+    inventory.setDiscount("mango", 0.20);
+    inventory.setDiscount("pear", 0.15);
+
     inventory.displayInventory();
+
     inventory.inventoryValue();
   }
 }
