@@ -2,8 +2,8 @@ package com.github.danielcraignicholson.oop.library;
 
 public class AudioBook extends LibraryItem implements Downloadable {
 
-  private int durationMinutes;
-  private String narrator;
+  private final int durationMinutes;
+  private final String narrator;
 
   public AudioBook(
       String title, String author, int yearPublished, int durationMinutes, String narrator) {

@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class InventoryManager {
 
-  private Map<String, Integer> inventory = new HashMap<>();
-  private Map<String, Double> prices = new HashMap<>();
+  private final Map<String, Integer> inventory = new HashMap<>();
+  private final Map<String, Double> prices = new HashMap<>();
 
   public void addItem(String item, int quantity) {
     inventory.put(item, inventory.getOrDefault(item, 0) + quantity);

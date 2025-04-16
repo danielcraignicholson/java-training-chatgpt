@@ -2,8 +2,8 @@ package com.github.danielcraignicholson.oop.vehicles;
 
 public abstract class Vehicle {
 
-  private String make;
-  private String model;
+  private final String make;
+  private final String model;
 
   public Vehicle(String make, String model) {
     this.make = make;

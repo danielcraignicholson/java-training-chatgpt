@@ -4,7 +4,7 @@ import java.util.*;
 
 public class EmailRegistry {
 
-  private Set<String> emailSet = new TreeSet<>(Comparator.reverseOrder());
+  private final Set<String> emailSet = new TreeSet<>(Comparator.reverseOrder());
 
   public void addEmails(List<String> emails) {
     emailSet.addAll(emails);

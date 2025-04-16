@@ -2,8 +2,8 @@ package com.github.danielcraignicholson.oop.vehicles;
 
 public class Engine implements Startable {
 
-  private String type;
-  private int horsepower;
+  private final String type;
+  private final int horsepower;
 
   public Engine(String type, int horsepower) {
     this.type = type;

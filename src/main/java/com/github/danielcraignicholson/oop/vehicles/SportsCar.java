@@ -2,7 +2,7 @@ package com.github.danielcraignicholson.oop.vehicles;
 
 public class SportsCar extends Car {
 
-  private boolean turboBoost;
+  private final boolean turboBoost;
 
   public SportsCar(String make, String model, int year, Engine engine, boolean turboBoost) {
     super(make, model, year, engine);

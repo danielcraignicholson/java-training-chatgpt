@@ -52,9 +52,8 @@ public abstract class LibraryItem {
     setStatus(Status.AVAILABLE);
     System.out.println("Book returned: " + getTitle() + " by " + getAuthor());
   }
-  ;
 
-  @Override
+    @Override
   public String toString() {
     return title + " by " + author + " published in " + yearPublished;
   }
