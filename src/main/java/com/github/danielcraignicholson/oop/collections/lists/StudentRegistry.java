@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.student;
+package com.github.danielcraignicholson.oop.collections.lists;
 
 import java.util.LinkedList;
 import java.util.List;
