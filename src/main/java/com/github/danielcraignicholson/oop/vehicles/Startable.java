@@ -2,8 +2,7 @@ package com.github.danielcraignicholson.oop.vehicles;
 
 public interface Startable {
 
-    void start();
+  void start();
 
-    void stop();
-
+  void stop();
 }

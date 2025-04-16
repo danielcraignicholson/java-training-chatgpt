@@ -2,33 +2,31 @@ package com.github.danielcraignicholson.oop.collections.maps;
 
 public class Main {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        InventoryManager inventory = new InventoryManager();
+    InventoryManager inventory = new InventoryManager();
 
-        inventory.addItem("apple", 10);
-        inventory.addItem("banana", 5);
-        inventory.addItem("apple", 5); // increases apple to 15
-        inventory.addItem("pear", 8);
+    inventory.addItem("apple", 10);
+    inventory.addItem("banana", 5);
+    inventory.addItem("apple", 5); // increases apple to 15
+    inventory.addItem("pear", 8);
 
-        inventory.displayInventory();
+    inventory.displayInventory();
 
-        inventory.removeItem("banana", 2);
-        inventory.removeItem("apple", 20); // removes apple completely
-        inventory.removeItem("grape", 1); // doesn't exist
+    inventory.removeItem("banana", 2);
+    inventory.removeItem("apple", 20); // removes apple completely
+    inventory.removeItem("grape", 1); // doesn't exist
 
-        inventory.checkStock("banana");
-        inventory.checkStock("apple");
+    inventory.checkStock("banana");
+    inventory.checkStock("apple");
 
-        inventory.displayInventory();
+    inventory.displayInventory();
 
-        inventory.setPrice("banana", 0.22);
-        inventory.setPrice("mango", 1.45);
-        inventory.setPrice("pear", 0.84);
+    inventory.setPrice("banana", 0.22);
+    inventory.setPrice("mango", 1.45);
+    inventory.setPrice("pear", 0.84);
 
-        inventory.displayInventory();
-        inventory.inventoryValue();
-
-    }
-
+    inventory.displayInventory();
+    inventory.inventoryValue();
+  }
 }
