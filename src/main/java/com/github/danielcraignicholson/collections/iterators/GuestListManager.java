@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.iterators;
+package com.github.danielcraignicholson.collections.iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;

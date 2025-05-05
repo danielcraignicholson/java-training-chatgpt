@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.lists;
+package com.github.danielcraignicholson.collections.lists;
 
 import java.util.List;
 

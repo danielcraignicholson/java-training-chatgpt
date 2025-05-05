@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.generics;
+package com.github.danielcraignicholson.collections.generics;
 
 import java.util.Objects;
 

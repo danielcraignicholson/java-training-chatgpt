@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.sets;
+package com.github.danielcraignicholson.collections.sets;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.maps;
+package com.github.danielcraignicholson.collections.maps;
 
 public class Main {
 

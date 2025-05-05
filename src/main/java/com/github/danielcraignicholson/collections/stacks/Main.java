@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.stacks;
+package com.github.danielcraignicholson.collections.stacks;
 
 import java.util.LinkedList;
 import java.util.Queue;

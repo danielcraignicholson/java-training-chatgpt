@@ -1,4 +1,4 @@
-package com.github.danielcraignicholson.oop.collections.maps;
+package com.github.danielcraignicholson.collections.maps;
 
 import java.util.HashMap;
 import java.util.Map;
